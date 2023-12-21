@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Penjumlahan Bilangan</h2>
+
+
+<form>
+  Bilangan Pertama: <input id="pertama" type="number" name="bpertama" >
+  Bilangan kedua: <input id="kedua" type="number" name="bkedua"><br><br>
+  <button onclick="Jumlahkan()">Jumlahkan</button>
+  <button onclick="Ulangi">Ulangi</button>
+</form> 
+
+
+
+<script>
+function Jumlahkan(){
+var b1 = parseFloat(document.getElementById("pertama").value);
+var b2 = parseFloat(document.getElementById("kedua").value);
+var ans = b1+b2;
+alert("Hasil Penjumlahan : "+ans);
+}
+function Ulangi(){
+document.getElementById("pertama").value = "";
+document.getElementById("kedua").value = "";
+}
+</script>
+
+</body>
+</html>

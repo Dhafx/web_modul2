@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            margin-top: 30px;
+            background-color: rgb(219, 153, 153);
+            padding: 20px;
+            width: 300px;
+            height: 350px;
+            border-radius: 15px;
+            align-self: center;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran</h1>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var nama = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (nama === "" || email === "" || password === "") {
+                alert("Harap isi semua kolom!");
+                return false;
+            }
+
+            // tambahkan validasi lainnya sesuai kebutuhan
+
+            return true;
+        }
+    </script>
+</body>
+</html>
